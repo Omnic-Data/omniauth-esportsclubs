@@ -3,7 +3,7 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class Esportsclubs < OmniAuth::Strategies::OAuth2
-      DEFAULT_SCOPE = 'identify'.freeze
+      DEFAULT_SCOPE = 'Identity'.freeze
 
       option :name, 'esportsclubs'
 

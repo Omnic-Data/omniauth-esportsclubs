@@ -32,14 +32,14 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-You can pass multiple scopes in the same string. For example, to get a user's Discord account info, you would set the scope to 'email identify'.
+You can pass multiple scopes in the same string. For example, to get a user's Discord account info, you would set the scope to 'email Identity'.
 
 You can also specify a callback URL by adding callback_url to the provider options.
 
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :discord, ENV['ESPORTSCLUBS_CLIENT_ID'], ENV['ESPORTSCLUBS_CLIENT_SECRET'], scope: 'email identify', callback_url: 'https://someurl.com/users/auth/esportsclubs/callback'
+  provider :discord, ENV['ESPORTSCLUBS_CLIENT_ID'], ENV['ESPORTSCLUBS_CLIENT_SECRET'], scope: 'email Identity', callback_url: 'https://someurl.com/users/auth/esportsclubs/callback'
 end
 ```
 
