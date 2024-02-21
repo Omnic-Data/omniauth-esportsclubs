@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe OmniAuth::Strategies::Discord do
+describe OmniAuth::Strategies::Esportsclubs do
   let(:access_token) { instance_double('AccessToken', options: {}) }
   let(:parsed_response) { instance_double('ParsedResponse') }
   let(:response) { instance_double('Response', parsed: parsed_response) }
@@ -9,7 +9,7 @@ describe OmniAuth::Strategies::Discord do
   let(:enterprise_authorize_url) { 'https://some.other.site.com/login/oauth/authorize' }
   let(:enterprise_token_url)     { 'https://some.other.site.com/login/oauth/access_token' }
   let(:enterprise) do
-    OmniAuth::Strategies::Discord.new('GITHUB_KEY', 'GITHUB_SECRET',
+    OmniAuth::Strategies::Esportsclubs.new('GITHUB_KEY', 'GITHUB_SECRET',
                                       client_options: {
                                         site: enterprise_site,
                                         authorize_url: enterprise_authorize_url,
@@ -18,7 +18,7 @@ describe OmniAuth::Strategies::Discord do
   end
 
   subject do
-    OmniAuth::Strategies::Discord.new({})
+    OmniAuth::Strategies::Esportsclubs.new({})
   end
 
   before(:each) do
@@ -27,7 +27,7 @@ describe OmniAuth::Strategies::Discord do
 
   context 'client options' do
     it 'should have correct site' do
-      expect(subject.options.client_options.site).to eq('https://discord.com/api')
+      expect(subject.options.client_options.site).to eq('https://esportsclubs.gg/api')
     end
 
     it 'should have correct authorize url' do

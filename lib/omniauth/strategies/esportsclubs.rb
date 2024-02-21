@@ -2,15 +2,15 @@ require 'omniauth-oauth2'
 
 module OmniAuth
   module Strategies
-    class Discord < OmniAuth::Strategies::OAuth2
+    class Esportsclubs < OmniAuth::Strategies::OAuth2
       DEFAULT_SCOPE = 'identify'.freeze
 
-      option :name, 'discord'
+      option :name, 'esportsclubs'
 
       option :client_options,
-             site: 'https://discord.com/api',
-             authorize_url: 'oauth2/authorize',
-             token_url: 'oauth2/token'
+             site: 'https://esportsclubs.gg/api',
+             authorize_url: 'oauth/authorization',
+             token_url: 'oauth/token'
 
       option :authorize_options, %i[scope permissions prompt]
 
@@ -19,8 +19,7 @@ module OmniAuth
       info do
         {
           name: raw_info['username'],
-          email: raw_info['verified'] ? raw_info['email'] : nil,
-          image: raw_info['avatar'] ? "https://cdn.discordapp.com/avatars/#{raw_info['id']}/#{raw_info['avatar']}" : nil,
+          email: raw_info['email'],
         }
       end
 

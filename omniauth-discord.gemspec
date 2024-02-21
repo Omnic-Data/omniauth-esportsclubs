@@ -2,14 +2,14 @@ $LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'omniauth/discord/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'omniauth-discord'
-  spec.version       = Omniauth::Discord::VERSION
-  spec.authors       = ['Adão Raul']
-  spec.email         = ['adao.raul@gmail.com']
+  spec.name          = 'omniauth-esportsclubs'
+  spec.version       = Omniauth::Esportsclubs::VERSION
+  spec.authors       = ['Omnic Data']
+  spec.email         = ['dev@omnic.ai']
 
-  spec.summary       = 'Discord OAuth2 Strategy for OmniAuth'
+  spec.summary       = 'EsportsClubs OAuth2 Strategy for OmniAuth'
   spec.description   = spec.summary
-  spec.homepage      = 'http://github.com/adaoraul/omniauth-discord'
+  spec.homepage      = 'https://github.com/Omnic-Data/omniauth-esportsclubs'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec)/}) }
