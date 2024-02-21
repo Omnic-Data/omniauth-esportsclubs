@@ -28,18 +28,16 @@ By default, Discord does not return a user's email address. You can request acce
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :discord, ENV['ESPORTSCLUBS_CLIENT_ID'], ENV['ESPORTSCLUBS_CLIENT_SECRET'], scope: 'email'
+  provider :discord, ENV['ESPORTSCLUBS_CLIENT_ID'], ENV['ESPORTSCLUBS_CLIENT_SECRET'], scope: 'Identity'
 end
 ```
-
-You can pass multiple scopes in the same string. For example, to get a user's Discord account info, you would set the scope to 'email Identity'.
 
 You can also specify a callback URL by adding callback_url to the provider options.
 
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :discord, ENV['ESPORTSCLUBS_CLIENT_ID'], ENV['ESPORTSCLUBS_CLIENT_SECRET'], scope: 'email Identity', callback_url: 'https://someurl.com/users/auth/esportsclubs/callback'
+  provider :discord, ENV['ESPORTSCLUBS_CLIENT_ID'], ENV['ESPORTSCLUBS_CLIENT_SECRET'], scope: 'Identity', callback_url: 'https://someurl.com/users/auth/esportsclubs/callback'
 end
 ```
 
